@@ -4,7 +4,7 @@ const path = require('path')
 const prisma = new PrismaClient({
   datasources: {
     db: {
-      url: 'file:/home/z/my-project/db/custom.db'
+      url: `file:${path.join(__dirname, 'prisma', 'db', 'dev.db')}`
     }
   }
 })
