@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Auto Reply Studio",
-  description: "Professional Auto Reply Template Generator for small businesses. Create, preview, and manage response templates with ease.",
-  keywords: ["Auto Reply", "Template Generator", "Business", "Communication"],
-  authors: [{ name: "Auto Reply Studio Team" }],
+  description: "Generator Template Balasan Otomatis Profesional untuk usaha kecil. Buat, pratinjau, dan kelola template respons WhatsApp dengan mudah.",
+  keywords: ["Balasan Otomatis", "Generator Template", "Bisnis", "Komunikasi", "WhatsApp"],
+  authors: [{ name: "Tim Auto Reply Studio" }],
   manifest: "/manifest.json",
   themeColor: "#2563eb",
   viewport: {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Auto Reply Studio",
-    description: "Professional Auto Reply Template Generator for small businesses",
+    description: "Generator Template Balasan Otomatis Profesional untuk usaha kecil",
     type: "website",
   },
 };

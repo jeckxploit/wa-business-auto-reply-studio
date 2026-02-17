@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Auto Reply Studio',
     short_name: 'Auto Reply',
-    description: 'Professional Auto Reply Template Generator for small businesses',
+    description: 'Generator Template Balasan Otomatis Profesional untuk usaha kecil',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',
@@ -30,13 +30,13 @@ export default function manifest(): MetadataRoute.Manifest {
         src: '/screenshot-desktop.png',
         sizes: '1920x1080',
         type: 'image/png',
-        label: 'Desktop View',
+        label: 'Tampilan Desktop',
       },
       {
         src: '/screenshot-mobile.png',
         sizes: '390x844',
         type: 'image/png',
-        label: 'Mobile View',
+        label: 'Tampilan Mobile',
       },
     ],
   }

@@ -118,8 +118,8 @@ export default function WAStudioPage() {
   const handleGenerate = async () => {
     if (!formData.businessName) {
       toast({
-        title: 'Validation Error',
-        description: 'Business name is required',
+        title: 'Error Validasi',
+        description: 'Nama bisnis wajib diisi',
         variant: 'destructive',
       })
       return
@@ -139,13 +139,13 @@ export default function WAStudioPage() {
       setGeneratedContent(data.content)
       setGeneratedCount(prev => prev + 1)
       toast({
-        title: 'Success',
-        description: 'Template generated successfully',
+        title: 'Berhasil',
+        description: 'Template berhasil dibuat',
       })
     } catch (error) {
       toast({
         title: 'Error',
-        description: 'Failed to generate template',
+        description: 'Gagal membuat template',
         variant: 'destructive',
       })
     } finally {
@@ -157,7 +157,7 @@ export default function WAStudioPage() {
     if (!generatedContent) {
       toast({
         title: 'Error',
-        description: 'Generate a template first',
+        description: 'Buat template terlebih dahulu',
         variant: 'destructive',
       })
       return
@@ -166,13 +166,13 @@ export default function WAStudioPage() {
     try {
       await navigator.clipboard.writeText(generatedContent)
       toast({
-        title: 'Copied!',
-        description: 'Template copied to clipboard',
+        title: 'Disalin!',
+        description: 'Template berhasil disalin',
       })
     } catch (error) {
       toast({
         title: 'Error',
-        description: 'Failed to copy to clipboard',
+        description: 'Gagal menyalin',
         variant: 'destructive',
       })
     }
@@ -182,7 +182,7 @@ export default function WAStudioPage() {
     if (!generatedContent) {
       toast({
         title: 'Error',
-        description: 'Generate a template first',
+        description: 'Buat template terlebih dahulu',
         variant: 'destructive',
       })
       return
@@ -203,8 +203,8 @@ export default function WAStudioPage() {
 
       console.log('✅ Template saved successfully')
       toast({
-        title: 'Saved!',
-        description: 'Template saved successfully',
+        title: 'Tersimpan!',
+        description: 'Template berhasil disimpan',
       })
     } catch (error) {
       console.error('❌ Save template error:', {
@@ -221,7 +221,7 @@ export default function WAStudioPage() {
 
       const errorMessage = error instanceof Error
         ? error.message
-        : 'Failed to save template. Please try again.'
+        : 'Gagal menyimpan template. Silakan coba lagi.'
 
       toast({
         title: 'Error',
@@ -235,13 +235,13 @@ export default function WAStudioPage() {
     try {
       await deleteTemplate(id)
       toast({
-        title: 'Deleted',
-        description: 'Template deleted successfully',
+        title: 'Terhapus',
+        description: 'Template berhasil dihapus',
       })
     } catch (error) {
       toast({
         title: 'Error',
-        description: 'Failed to delete template',
+        description: 'Gagal menghapus template',
         variant: 'destructive',
       })
     }
@@ -258,8 +258,8 @@ export default function WAStudioPage() {
     })
     setGeneratedContent(template.content)
     toast({
-      title: 'Loaded',
-      description: 'Template loaded successfully',
+      title: 'Dimuat',
+      description: 'Template berhasil dimuat',
     })
   }
 
@@ -273,7 +273,7 @@ export default function WAStudioPage() {
     if (!generatedContent) {
       toast({
         title: 'Error',
-        description: 'Generate a template first',
+        description: 'Buat template terlebih dahulu',
         variant: 'destructive',
       })
       return
@@ -285,7 +285,7 @@ export default function WAStudioPage() {
     if (!generatedContent) {
       toast({
         title: 'Error',
-        description: 'Generate a template first',
+        description: 'Buat template terlebih dahulu',
         variant: 'destructive',
       })
       return
@@ -294,13 +294,13 @@ export default function WAStudioPage() {
     try {
       await navigator.clipboard.writeText(getWhatsAppLink())
       toast({
-        title: 'Copied!',
-        description: 'WhatsApp link copied to clipboard',
+        title: 'Disalin!',
+        description: 'Link WhatsApp berhasil disalin',
       })
     } catch (error) {
       toast({
         title: 'Error',
-        description: 'Failed to copy link',
+        description: 'Gagal menyalin link',
         variant: 'destructive',
       })
     }
@@ -310,7 +310,7 @@ export default function WAStudioPage() {
     if (!generatedContent) {
       toast({
         title: 'Error',
-        description: 'Generate a template first',
+        description: 'Buat template terlebih dahulu',
         variant: 'destructive',
       })
       return
@@ -320,16 +320,16 @@ export default function WAStudioPage() {
 Auto Reply Studio
 ===============================
 
-Business Name: ${formData.businessName || 'N/A'}
-Category: ${formData.category}
-Tone: ${formData.tone}
+Nama Bisnis: ${formData.businessName || 'N/A'}
+Kategori: ${formData.category}
+Nada: ${formData.tone}
 Status: ${formData.status}
 
-Generated Template:
+Template yang Dibuat:
 -------------------
 ${generatedContent}
 
-Generated by Auto Reply Studio
+Dibuat oleh Auto Reply Studio
 `.trim()
 
     const blob = new Blob([textToExport], { type: 'text/plain' })
@@ -341,10 +341,10 @@ Generated by Auto Reply Studio
     a.click()
     document.body.removeChild(a)
     URL.revokeObjectURL(url)
-    
+
     toast({
-      title: 'Exported!',
-      description: 'Template exported as .txt file',
+      title: 'Diekspor!',
+      description: 'Template berhasil diekspor sebagai file .txt',
     })
   }
 
@@ -387,7 +387,7 @@ Generated by Auto Reply Studio
                   Auto Reply Studio
                 </h1>
                 <p className="text-xs text-slate-600 dark:text-slate-400 truncate leading-tight">
-                  Professional Message Generator
+                  Generator Pesan Profesional
                 </p>
               </div>
             </div>
@@ -403,7 +403,7 @@ Generated by Auto Reply Studio
                 className="hidden sm:flex items-center gap-2 transition-all duration-200 hover:scale-105"
               >
                 <Folder className="h-4 w-4" />
-                View Saved
+                Lihat Tersimpan
               </Button>
               <Button
                 size="sm"
@@ -415,8 +415,8 @@ Generated by Auto Reply Studio
                 className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg shadow-blue-500/20 transition-all duration-200 hover:scale-105 hover:shadow-xl"
               >
                 <Sparkles className="h-4 w-4 mr-1.5" />
-                <span className="hidden sm:inline">Generate Template</span>
-                <span className="sm:hidden">Generate</span>
+                <span className="hidden sm:inline">Buat Template</span>
+                <span className="sm:hidden">Buat</span>
               </Button>
               <div className="w-px h-8 bg-slate-200 dark:bg-slate-700 mx-1 hidden sm:block" />
               <Button
@@ -443,7 +443,7 @@ Generated by Auto Reply Studio
                 </div>
                 <div className="flex-1">
                   <p className="text-xs font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wide">
-                    Templates Generated
+                    Template Dibuat
                   </p>
                   <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">
                     <AnimatedNumber value={generatedCount} />
@@ -453,7 +453,7 @@ Generated by Auto Reply Studio
               </div>
             </CardContent>
           </Card>
-          
+
           <Card className="rounded-2xl border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-black/20 hover:scale-[1.02] hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 bg-white/50 dark:bg-slate-900/50 backdrop-blur">
             <CardContent className="p-5">
               <div className="flex items-center gap-4">
@@ -462,7 +462,7 @@ Generated by Auto Reply Studio
                 </div>
                 <div className="flex-1">
                   <p className="text-xs font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wide">
-                    Templates Saved
+                    Template Tersimpan
                   </p>
                   <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">
                     <AnimatedNumber value={templates.length} />
@@ -472,7 +472,7 @@ Generated by Auto Reply Studio
               </div>
             </CardContent>
           </Card>
-          
+
           <Card className="rounded-2xl border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-black/20 hover:scale-[1.02] hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 bg-white/50 dark:bg-slate-900/50 backdrop-blur">
             <CardContent className="p-5">
               <div className="flex items-center gap-4">
@@ -481,7 +481,7 @@ Generated by Auto Reply Studio
                 </div>
                 <div className="flex-1">
                   <p className="text-xs font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wide">
-                    Most Used Category
+                    Kategori Paling Sering
                   </p>
                   <p className="text-lg font-bold text-slate-900 dark:text-slate-100 capitalize">
                     {mostUsedCategory}
@@ -499,20 +499,20 @@ Generated by Auto Reply Studio
           <Card id="template-form" className="rounded-2xl border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-black/20 bg-white/80 dark:bg-slate-900/80 backdrop-blur">
             <CardHeader className="pb-6">
               <CardTitle className="text-2xl font-bold text-slate-900 dark:text-slate-100">
-                Create Your Template
+                Buat Template Anda
               </CardTitle>
               <CardDescription className="text-base text-slate-600 dark:text-slate-400">
-                Fill in your business details and customize the response
+                Isi detail bisnis Anda dan sesuaikan respons
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="customer-name" className="text-sm font-medium text-slate-700 dark:text-slate-300">
-                  Customer Name
+                  Nama Pelanggan
                 </Label>
                 <Input
                   id="customer-name"
-                  placeholder="e.g., John"
+                  placeholder="mis. Budi"
                   value={formData.customerName}
                   onChange={(e) => setFormData({ ...formData, customerName: e.target.value })}
                   className="rounded-xl border-slate-300 dark:border-slate-700 focus:ring-2 focus:ring-blue-500 transition-all duration-200 focus:scale-[1.01] bg-white dark:bg-slate-800"
@@ -521,11 +521,11 @@ Generated by Auto Reply Studio
 
               <div className="space-y-2">
                 <Label htmlFor="business-name" className="text-sm font-medium text-slate-700 dark:text-slate-300">
-                  Business Name <span className="text-red-500">*</span>
+                  Nama Bisnis <span className="text-red-500">*</span>
                 </Label>
                 <Input
                   id="business-name"
-                  placeholder="e.g., Cafe Delight"
+                  placeholder="mis. Cafe Delight"
                   value={formData.businessName}
                   onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
                   required
@@ -535,11 +535,11 @@ Generated by Auto Reply Studio
 
               <div className="space-y-2">
                 <Label htmlFor="operational-hours" className="text-sm font-medium text-slate-700 dark:text-slate-300">
-                  Operational Hours
+                  Jam Operasional
                 </Label>
                 <Input
                   id="operational-hours"
-                  placeholder="e.g., 9AM-5PM"
+                  placeholder="mis. 9PAGI-5SORE"
                   value={formData.operationalHours}
                   onChange={(e) => setFormData({ ...formData, operationalHours: e.target.value })}
                   className="rounded-xl border-slate-300 dark:border-slate-700 focus:ring-2 focus:ring-blue-500 transition-all duration-200 focus:scale-[1.01] bg-white dark:bg-slate-800"
@@ -557,18 +557,18 @@ Generated by Auto Reply Studio
                 >
                   <div className="flex items-center space-x-2 p-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-950/20 transition-all duration-200 cursor-pointer">
                     <RadioGroupItem value="open" id="open" className="border-slate-400" />
-                    <Label htmlFor="open" className="font-normal cursor-pointer text-sm">Open</Label>
+                    <Label htmlFor="open" className="font-normal cursor-pointer text-sm">Buka</Label>
                   </div>
                   <div className="flex items-center space-x-2 p-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-950/20 transition-all duration-200 cursor-pointer">
                     <RadioGroupItem value="closed" id="closed" className="border-slate-400" />
-                    <Label htmlFor="closed" className="font-normal cursor-pointer text-sm">Closed</Label>
+                    <Label htmlFor="closed" className="font-normal cursor-pointer text-sm">Tutup</Label>
                   </div>
                 </RadioGroup>
               </div>
 
               <div className="space-y-3">
                 <Label className="text-sm font-medium text-slate-700 dark:text-slate-300">
-                  Tone
+                  Nada
                 </Label>
                 <RadioGroup
                   value={formData.tone}
@@ -585,14 +585,14 @@ Generated by Auto Reply Studio
                   </div>
                   <div className="flex items-center space-x-2 p-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-950/20 transition-all duration-200 cursor-pointer">
                     <RadioGroupItem value="casual" id="casual" className="border-slate-400" />
-                    <Label htmlFor="casual" className="font-normal cursor-pointer text-sm">Casual</Label>
+                    <Label htmlFor="casual" className="font-normal cursor-pointer text-sm">Santai</Label>
                   </div>
                 </RadioGroup>
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="template-category" className="text-sm font-medium text-slate-700 dark:text-slate-300">
-                  Template Category
+                  Kategori Template
                 </Label>
                 <Select
                   value={formData.category}
@@ -602,11 +602,11 @@ Generated by Auto Reply Studio
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent className="rounded-xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900">
-                    <SelectItem value="open">Business Open</SelectItem>
-                    <SelectItem value="closed">Business Closed</SelectItem>
-                    <SelectItem value="promo">Promotion</SelectItem>
-                    <SelectItem value="confirmation">Order Confirmation</SelectItem>
-                    <SelectItem value="reminder">Payment Reminder</SelectItem>
+                    <SelectItem value="open">Bisnis Buka</SelectItem>
+                    <SelectItem value="closed">Bisnis Tutup</SelectItem>
+                    <SelectItem value="promo">Promosi</SelectItem>
+                    <SelectItem value="confirmation">Konfirmasi Pesanan</SelectItem>
+                    <SelectItem value="reminder">Pengingat Pembayaran</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -619,12 +619,12 @@ Generated by Auto Reply Studio
                 {isLoading ? (
                   <span className="flex items-center gap-2">
                     <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                    Generating...
+                    Membuat...
                   </span>
                 ) : (
                   <>
                     <Sparkles className="mr-2 h-5 w-5" />
-                    Generate Template
+                    Buat Template
                   </>
                 )}
               </Button>
@@ -637,17 +637,17 @@ Generated by Auto Reply Studio
             <Card className="rounded-2xl border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-black/20 bg-white/80 dark:bg-slate-900/80 backdrop-blur">
               <CardHeader className="pb-6">
                 <CardTitle className="text-2xl font-bold text-slate-900 dark:text-slate-100">
-                  Live Preview
+                  Pratinjau Langsung
                 </CardTitle>
                 <CardDescription className="text-base text-slate-600 dark:text-slate-400">
-                  See your template in real-time
+                  Lihat template Anda secara real-time
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="min-h-[160px] rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950/50 p-4 whitespace-pre-wrap transition-all duration-300 animate-in fade-in font-mono text-sm leading-relaxed">
                   {generatedContent || (
                     <span className="text-slate-400 dark:text-slate-600 italic">
-                      Your template will appear here...
+                      Template Anda akan muncul di sini...
                     </span>
                   )}
                 </div>
@@ -655,7 +655,7 @@ Generated by Auto Reply Studio
                 {/* Character Counter */}
                 <div className="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-950/50 border border-slate-200 dark:border-slate-700">
                   <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
-                    Character Count
+                    Jumlah Karakter
                   </span>
                   <span className={`font-bold ${generatedContent.length > 1000 ? 'text-red-500' : 'text-blue-500'}`}>
                     {generatedContent.length} / 1000
@@ -664,47 +664,47 @@ Generated by Auto Reply Studio
 
                 {/* WhatsApp Action Buttons */}
                 <div className="grid grid-cols-2 gap-3">
-                  <Button 
-                    onClick={handleCopy} 
+                  <Button
+                    onClick={handleCopy}
                     variant="outline"
                     className="rounded-xl border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200 hover:scale-[1.02]"
                   >
                     <Copy className="mr-2 h-4 w-4" />
-                    Copy
+                    Salin
                   </Button>
-                  <Button 
+                  <Button
                     onClick={handleSave}
                     className="rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white shadow-lg shadow-emerald-500/20 transition-all duration-200 hover:scale-[1.02]"
                   >
                     <Save className="mr-2 h-4 w-4" />
-                    Save
+                    Simpan
                   </Button>
-                  <Button 
+                  <Button
                     onClick={handleOpenWhatsApp}
                     className="rounded-xl bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg shadow-green-500/20 transition-all duration-200 hover:scale-[1.02] col-span-2"
                   >
                     <ExternalLink className="mr-2 h-4 w-4" />
-                    Open in WhatsApp
+                    Buka di WhatsApp
                   </Button>
                 </div>
 
                 {/* Secondary Actions */}
                 <div className="grid grid-cols-2 gap-3 pt-2">
-                  <Button 
+                  <Button
                     onClick={handleCopyWhatsAppLink}
                     variant="ghost"
                     className="rounded-xl text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200 hover:scale-[1.02]"
                   >
                     <Copy className="mr-2 h-4 w-4" />
-                    Copy Link
+                    Salin Link
                   </Button>
-                  <Button 
+                  <Button
                     onClick={handleExportAsTxt}
                     variant="ghost"
                     className="rounded-xl text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200 hover:scale-[1.02]"
                   >
                     <Download className="mr-2 h-4 w-4" />
-                    Export .txt
+                    Ekspor .txt
                   </Button>
                 </div>
               </CardContent>
@@ -714,10 +714,10 @@ Generated by Auto Reply Studio
             <Card id="saved-templates" className="rounded-2xl border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-black/20 bg-white/80 dark:bg-slate-900/80 backdrop-blur">
               <CardHeader className="pb-6">
                 <CardTitle className="text-2xl font-bold text-slate-900 dark:text-slate-100">
-                  Saved Templates
+                  Template Tersimpan
                 </CardTitle>
                 <CardDescription className="text-base text-slate-600 dark:text-slate-400">
-                  Manage your saved templates
+                  Kelola template yang tersimpan
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -726,7 +726,7 @@ Generated by Auto Reply Studio
                     <div className="text-center py-12">
                       <Folder className="h-12 w-12 mx-auto text-slate-300 dark:text-slate-700 mb-3" />
                       <p className="text-sm text-slate-500 dark:text-slate-500">
-                        No saved templates yet
+                        Belum ada template tersimpan
                       </p>
                     </div>
                   ) : (
@@ -750,9 +750,9 @@ Generated by Auto Reply Studio
                               {template.content}
                             </p>
                             <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-500">
-                              <span>{template.businessName || 'No business name'}</span>
+                              <span>{template.businessName || 'Tidak ada nama bisnis'}</span>
                               <span>•</span>
-                              <span>Generated • {formatDate(template.createdAt)}</span>
+                              <span>Dibuat • {formatDate(template.createdAt)}</span>
                             </div>
                           </div>
                           <Button
@@ -782,25 +782,25 @@ Generated by Auto Reply Studio
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="text-center mb-4">
             <h3 className="text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-widest">
-              🔒 Security & Quality Assurance
+              🔒 Keamanan & Jaminan Kualitas
             </h3>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             <div className="flex items-center justify-center gap-2 text-sm text-slate-700 dark:text-slate-300 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200">
               <CheckCircle2 className="h-4 w-4 text-emerald-500 flex-shrink-0" />
-              <span>Input Sanitization</span>
+              <span>Sanitasi Input</span>
             </div>
             <div className="flex items-center justify-center gap-2 text-sm text-slate-700 dark:text-slate-300 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200">
               <CheckCircle2 className="h-4 w-4 text-emerald-500 flex-shrink-0" />
-              <span>XSS Prevention</span>
+              <span>Pencegahan XSS</span>
             </div>
             <div className="flex items-center justify-center gap-2 text-sm text-slate-700 dark:text-slate-300 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200">
               <CheckCircle2 className="h-4 w-4 text-emerald-500 flex-shrink-0" />
-              <span>Server Validation</span>
+              <span>Validasi Server</span>
             </div>
             <div className="flex items-center justify-center gap-2 text-sm text-slate-700 dark:text-slate-300 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-200">
               <CheckCircle2 className="h-4 w-4 text-emerald-500 flex-shrink-0" />
-              <span>Safe Queries</span>
+              <span>Query Aman</span>
             </div>
           </div>
         </div>
@@ -813,10 +813,10 @@ Generated by Auto Reply Studio
             Auto Reply Studio <span className="text-slate-400 dark:text-slate-600 font-normal">v1.0.0</span>
           </p>
           <p className="text-xs text-slate-600 dark:text-slate-400 mb-2">
-            © 2026 Kholid Azaki. All rights reserved.
+            © 2026 Kholid Azaki. Hak cipta dilindungi.
           </p>
           <p className="text-xs text-slate-500 dark:text-slate-500">
-            Built with Next.js 16 + Prisma ORM + shadcn/ui
+            Dibuat dengan Next.js 16 + Prisma ORM + shadcn/ui
           </p>
         </div>
       </footer>

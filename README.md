@@ -2,16 +2,16 @@
 
 <div align="center">
 
-Professional Auto Reply Template Generator for Modern Businesses
+Generator Template Balasan Otomatis Profesional untuk Bisnis Modern
 
-**Generate, customize, and manage response templates with ease.**
+**Buat, sesuaikan, dan kelola template respons dengan mudah.**
 
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![Prisma](https://img.shields.io/badge/Prisma-6-2d3748?style=for-the-badge&logo=prisma)](https://www.prisma.io/)
 
-[Live Demo](#) • [Features](#-features) • [Architecture](#-architecture) • [Getting Started](#-getting-started)
+[Demo Langsung](#) • [Fitur](#-fitur) • [Arsitektur](#-arsitektur) • [Memulai](#-memulai)
 
 </div>
 
@@ -39,39 +39,39 @@ Professional Auto Reply Template Generator for Modern Businesses
 
 ---
 
-## ✨ Features
+## ✨ Fitur
 
-### 🎨 **Smart Template Engine**
-- **5 Template Categories**: Business Open, Business Closed, Promotion, Order Confirmation, Payment Reminder
-- **3 Tone Variations**: Formal, Semi-Formal, and Casual response styles
-- **Real-time Preview**: See changes instantly as you customize
-- **Placeholder System**: Dynamic fields (`{{name}}`, `{{business}}`, `{{hours}}`)
+### 🎨 **Mesin Template Pintar**
+- **5 Kategori Template**: Bisnis Buka, Bisnis Tutup, Promosi, Konfirmasi Pesanan, Pengingat Pembayaran
+- **3 Variasi Nada**: Gaya respons Formal, Semi-Formal, dan Santai
+- **Pratinjau Real-time**: Lihat perubahan secara instan saat menyesuaikan
+- **Sistem Placeholder**: Field dinamis (`{{name}}`, `{{business}}`, `{{hours}}`)
 
-### 🛠️ **Advanced Functionality**
-- **Character Counter**: Track message length (WhatsApp limit: 1000 characters)
-- **WhatsApp Link Generator**: Create shareable `wa.me` links with pre-filled messages
-- **Template Management**: Save, load, and delete your templates
-- **One-click Copy**: Copy templates to clipboard instantly
-- **Export as .txt**: Download templates as text files
+### 🛠️ **Fungsionalitas Lanjutan**
+- **Penghitung Karakter**: Lacak panjang pesan (batas WhatsApp: 1000 karakter)
+- **Generator Link WhatsApp**: Buat link `wa.me` yang dapat dibagikan dengan pesan terisi otomatis
+- **Manajemen Template**: Simpan, muat, dan hapus template Anda
+- **Salin Satu Klik**: Salin template ke clipboard secara instan
+- **Ekspor sebagai .txt**: Unduh template sebagai file teks
 
-### 🎯 **Professional Features**
-- **Mini Dashboard**: Track generated templates, saved templates, and most used category
-- **Dark/Light Mode**: System preference detection with localStorage persistence
-- **Responsive Design**: Mobile-first approach with smooth transitions
-- **Micro-interactions**: Hover effects, animations, and visual feedback
-- **Noise Texture Background**: Subtle pattern in dark mode for depth
+### 🎯 **Fitur Profesional**
+- **Dashboard Mini**: Lacak template yang dibuat, template tersimpan, dan kategori paling sering digunakan
+- **Mode Gelap/Terang**: Deteksi preferensi sistem dengan persistensi localStorage
+- **Desain Responsif**: Pendekatan mobile-first dengan transisi halus
+- **Mikro-interaksi**: Efek hover, animasi, dan umpan balik visual
+- **Latar Belakang Tekstur Noise**: Pola halus dalam mode gelap untuk kedalaman
 
-### 🔒 **Security First**
-- **Input Sanitization**: All user inputs are sanitized to prevent XSS attacks
-- **Server-side Validation**: All operations validated on the backend
-- **Safe Database Queries**: Prisma ORM prevents SQL injection
-- **XSS Prevention**: Regex-based safe placeholder replacement
+### 🔒 **Keamanan Utama**
+- **Sanitasi Input**: Semua input pengguna disanitasi untuk mencegah serangan XSS
+- **Validasi Sisi Server**: Semua operasi divalidasi di backend
+- **Query Database Aman**: Prisma ORM mencegah injeksi SQL
+- **Pencegahan XSS**: Penggantian placeholder aman berbasis regex
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ Arsitektur
 
-### System Architecture
+### Arsitektur Sistem
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -128,47 +128,47 @@ Professional Auto Reply Template Generator for Modern Businesses
 
 ### Architecture Decisions
 
-#### Why Next.js 16 with App Router?
+#### Mengapa Next.js 16 dengan App Router?
 
-**Decision**: Next.js 16 with App Router was chosen as the core framework.
+**Keputusan**: Next.js 16 dengan App Router dipilih sebagai framework inti.
 
-**Reasoning**:
+**Alasan**:
 
-1. **Server Components by Default**: Reduces client-side JavaScript bundle, improving First Contentful Paint (FCP) and Time to Interactive (TTI).
+1. **Server Components secara Default**: Mengurangi bundle JavaScript sisi klien, meningkatkan First Contentful Paint (FCP) dan Time to Interactive (TTI).
 
-2. **Streaming & Suspense**: Progressive rendering allows showing UI parts as they become ready, improving perceived performance.
+2. **Streaming & Suspense**: Rendering progresif memungkinkan menampilkan bagian UI saat siap, meningkatkan kinerja yang dirasakan.
 
-3. **File-based Routing**: Intuitive routing with layouts, error boundaries, and loading states built-in.
+3. **Routing Berbasis File**: Routing intuitif dengan layout, error boundaries, dan loading states bawaan.
 
-4. **Type Safety**: Full TypeScript support with route parameters typed automatically.
+4. **Type Safety**: Dukungan TypeScript penuh dengan parameter route yang diketik otomatis.
 
-5. **Optimized Images & Fonts**: `next/image` and `next/font` prevent layout shifts and optimize assets automatically.
+5. **Gambar & Font yang Dioptimalkan**: `next/image` dan `next/font` mencegah layout shifts dan mengoptimalkan aset secara otomatis.
 
-6. **API Routes**: Built-in backend functionality without needing a separate server.
+6. **API Routes**: Fungsi backend bawaan tanpa perlu server terpisah.
 
-**Trade-off**: More complex than simple React apps, but benefits outweigh complexity for production applications.
+**Trade-off**: Lebih kompleks daripada aplikasi React sederhana, tetapi manfaatnya lebih besar daripada kompleksitas untuk aplikasi produksi.
 
-#### Why Prisma ORM?
+#### Mengapa Prisma ORM?
 
-**Decision**: Prisma 6 as the database ORM layer.
+**Keputusan**: Prisma 6 sebagai layer ORM database.
 
-**Reasoning**:
+**Alasan**:
 
-1. **Type Safety**: Auto-generated TypeScript types based on schema eliminate "any" types and provide IDE autocomplete.
+1. **Type Safety**: Tipe TypeScript yang dihasilkan otomatis berdasarkan schema menghilangkan tipe "any" dan menyediakan autocomplete IDE.
 
-2. **Intuitive API**: Readable query syntax that's easier to maintain than raw SQL.
+2. **API Intuitif**: Sintaks query yang mudah dibaca dan lebih mudah dipelihara daripada SQL mentah.
 
-3. **Migration System**: Version-controlled schema changes with rollback support.
+3. **Sistem Migrasi**: Perubahan schema yang dikontrol versi dengan dukungan rollback.
 
-4. **Connection Pooling**: Automatic database connection management for better performance.
+4. **Connection Pooling**: Manajemen koneksi database otomatis untuk kinerja lebih baik.
 
-5. **Security**: Parameterized queries prevent SQL injection attacks.
+5. **Keamanan**: Query terparameter mencegah serangan injeksi SQL.
 
-6. **Multi-database Support**: Easy to switch from SQLite (dev) to PostgreSQL (prod).
+6. **Dukungan Multi-database**: Mudah beralih dari SQLite (dev) ke PostgreSQL (prod).
 
-**Code Example**:
+**Contoh Kode**:
 ```typescript
-// Type-safe with autocomplete
+// Type-safe dengan autocomplete
 const templates = await db.template.findMany({
   where: { category: 'promo' },
   orderBy: { createdAt: 'desc' }
@@ -176,15 +176,15 @@ const templates = await db.template.findMany({
 // ✅ Full TypeScript inference
 ```
 
-**Trade-off**: Slight performance overhead vs raw SQL, but negligible for this use case.
+**Trade-off**: Sedikit overhead kinerja vs SQL mentah, tetapi dapat diabaikan untuk kasus penggunaan ini.
 
-#### Why Zustand for State Management?
+#### Mengapa Zustand untuk State Management?
 
-**Decision**: Zustand instead of React Context or Redux.
+**Keputusan**: Zustand daripada React Context atau Redux.
 
-**Reasoning**:
+**Alasan**:
 
-1. **Minimal Boilerplate**: No providers, no action creators, no reducers.
+1. **Boilerplate Minimal**: Tidak ada provider, action creators, atau reducers.
 ```typescript
 // Simple vs Complex
 const { templates, fetchTemplates } = useTemplateStore()
@@ -194,55 +194,55 @@ const { templates, fetchTemplates } = useTemplateStore()
 </Provider>
 ```
 
-2. **Performance**: Selective subscriptions prevent unnecessary re-renders.
+2. **Kinerja**: Langganan selektif mencegah re-render yang tidak perlu.
 
-3. **Small Bundle**: ~1KB minified vs Redux Toolkit (~10KB).
+3. **Bundle Kecil**: ~1KB diminimalkan vs Redux Toolkit (~10KB).
 
-4. **TypeScript Native**: Full type inference without extra configuration.
+4. **TypeScript Native**: Inferensi tipe penuh tanpa konfigurasi tambahan.
 
-5. **Developer Experience**: Simple API, easy to test, no middleware complexity.
+5. **Pengalaman Developer**: API sederhana, mudah ditest, tanpa kompleksitas middleware.
 
-**Trade-off**: Less structured than Redux, but sufficient for this app's state complexity.
+**Trade-off**: Kurang terstruktur daripada Redux, tetapi cukup untuk kompleksitas state aplikasi ini.
 
-#### Why shadcn/ui Components?
+#### Mengapa Komponen shadcn/ui?
 
-**Decision**: shadcn/ui over component libraries like Material-UI or Chakra UI.
+**Keputusan**: shadcn/ui daripada library komponen seperti Material-UI atau Chakra UI.
 
-**Reasoning**:
+**Alasan**:
 
-1. **Full Ownership**: Components copied into codebase, no vendor lock-in.
+1. **Kepemilikan Penuh**: Komponen disalin ke codebase, tidak ada vendor lock-in.
 
-2. **Radix UI Foundation**: WCAG-compliant accessibility built-in.
+2. **Fondasi Radix UI**: Aksesibilitas sesuai WCAG bawaan.
 
-3. **Tailwind CSS**: Easy customization using utility classes.
+3. **Tailwind CSS**: Kustomisasi mudah menggunakan utility classes.
 
-4. **Tree-shakeable**: Only bundle components you use.
+4. **Tree-shakeable**: Hanya bundle komponen yang Anda gunakan.
 
-5. **Modern Design**: Beautiful, accessible components out of the box.
+5. **Desain Modern**: Komponen yang indah dan aksesibel langsung siap pakai.
 
-6. **TypeScript**: Full type safety with all components.
+6. **TypeScript**: Type safety penuh dengan semua komponen.
 
-**Example Customization**:
+**Contoh Kustomisasi**:
 ```tsx
-// Easy to modify
+// Mudah dimodifikasi
 <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:scale-105">
   Generate
 </Button>
 ```
 
-**Trade-off**: More setup than pre-styled libraries, but gives complete control.
+**Trade-off**: Lebih banyak setup daripada library pre-styled, tetapi memberikan kontrol penuh.
 
 ---
 
-## 📈 Scalability
+## 📈 Skalabilitas
 
-### Current Architecture (Single-User)
+### Arsitektur Saat Ini (Single-User)
 
 ```
-User → Browser → Next.js Server → SQLite DB
+User → Browser → Server Next.js → DB SQLite
 ```
 
-### Multi-User SaaS Architecture (Future)
+### Arsitektur Multi-User SaaS (Masa Depan)
 
 ```
                  ┌──────────────────┐
@@ -537,18 +537,18 @@ const securityHeaders = [
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Memulai
 
-### Prerequisites
+### Prasyarat
 
-- Node.js 18+ 
-- Bun or npm
+- Node.js 18+
+- Bun atau npm
 - Git
 
-### Installation
+### Instalasi
 
 ```bash
-# Clone the repository
+# Clone repository
 git clone <your-repo-url>
 cd wa-business-auto-reply-studio
 
@@ -565,7 +565,7 @@ bun run db:push
 bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see your application.
+Buka [http://localhost:3000](http://localhost:3000) untuk melihat aplikasi Anda.
 
 ### Environment Variables
 
@@ -577,31 +577,31 @@ DATABASE_URL="file:./db/custom.db"
 NEXT_PUBLIC_APP_URL="http://localhost:3000"
 ```
 
-### Available Scripts
+### Script yang Tersedia
 
 ```bash
 bun run dev          # Start development server
-bun run build        # Build for production
+bun run build        # Build untuk production
 bun run start        # Start production server
 bun run lint         # Run ESLint
-bun run db:push      # Push schema to database
+bun run db:push      # Push schema ke database
 bun run db:generate  # Generate Prisma Client
 ```
 
 ---
 
-## 📊 Performance & Optimization
+## 📊 Kinerja & Optimasi
 
-### Performance Goals
+### Target Kinerja
 
-| Metric | Target | Notes |
+| Metrik | Target | Catatan |
 |--------|-------|-------|
-| Performance | 95+ | Optimized for production build |
-| Accessibility | 95+ | WCAG compliance |
-| Best Practices | 95+ | Security & code quality |
-| SEO | 95+ | Meta tags & semantic HTML |
+| Performance | 95+ | Dioptimalkan untuk production build |
+| Accessibility | 95+ | Kepatuhan WCAG |
+| Best Practices | 95+ | Kualitas kode & keamanan |
+| SEO | 95+ | Meta tag & HTML semantik |
 
-### Key Performance Indicators
+### Indikator Kinerja Utama
 
 - **First Contentful Paint (FCP)**: Target < 1.2s
 - **Largest Contentful Paint (LCP)**: Target < 2.5s
@@ -609,32 +609,32 @@ bun run db:generate  # Generate Prisma Client
 - **Time to Interactive (TTI)**: Target < 3.5s
 - **Total Blocking Time (TBT)**: Target < 200ms
 
-### Optimization Techniques
+### Teknik Optimasi
 
-1. **Code Splitting**: Automatic route-based splitting
-2. **Image Optimization**: Next.js Image component
-3. **Font Optimization**: `next/font` for zero layout shift
-4. **Bundle Analysis**: Tree-shaking unused code
-5. **Lazy Loading**: Dynamic imports for heavy components
-6. **CSS Optimization**: Tailwind CSS purging
+1. **Code Splitting**: Split otomatis berbasis route
+2. **Optimasi Gambar**: Komponen Next.js Image
+3. **Optimasi Font**: `next/font` untuk zero layout shift
+4. **Analisis Bundle**: Tree-shaking kode yang tidak digunakan
+5. **Lazy Loading**: Import dinamis untuk komponen berat
+6. **Optimasi CSS**: Tailwind CSS purging
 
 ---
 
 ## 🎨 Tech Stack
 
-### Core Framework
-- **Next.js 16**: React framework with App Router
-- **TypeScript 5**: Type-safe development
-- **React 19**: Latest React features
+### Framework Inti
+- **Next.js 16**: Framework React dengan App Router
+- **TypeScript 5**: Development type-safe
+- **React 19**: Fitur React terbaru
 
 ### Styling
-- **Tailwind CSS 4**: Utility-first CSS framework
-- **shadcn/ui**: Accessible component library
-- **Lucide React**: Icon library
+- **Tailwind CSS 4**: Framework CSS utility-first
+- **shadcn/ui**: Library komponen yang aksesibel
+- **Lucide React**: Library ikon
 
 ### State Management
-- **Zustand**: Lightweight state management
-- **React Hooks**: Built-in hooks
+- **Zustand**: State management yang ringan
+- **React Hooks**: Hooks bawaan
 
 ### Database
 - **Prisma 6**: Type-safe ORM
