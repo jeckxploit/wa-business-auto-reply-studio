@@ -14,10 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "WA Business Auto Reply Studio",
-  description: "Professional WhatsApp Auto Reply Template Generator for small businesses. Create, preview, and manage WhatsApp response templates with ease.",
-  keywords: ["WhatsApp", "Auto Reply", "Template Generator", "Business", "Communication"],
-  authors: [{ name: "WA Studio Team" }],
+  title: "Auto Reply Studio",
+  description: "Professional Auto Reply Template Generator for small businesses. Create, preview, and manage response templates with ease.",
+  keywords: ["Auto Reply", "Template Generator", "Business", "Communication"],
+  authors: [{ name: "Auto Reply Studio Team" }],
   manifest: "/manifest.json",
   themeColor: "#2563eb",
   viewport: {
@@ -38,19 +38,19 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "WA Reply Studio",
+    title: "Auto Reply Studio",
   },
   other: {
     "mobile-web-app-capable": "true",
     "apple-mobile-web-app-capable": "true",
     "apple-mobile-web-app-status-bar-style": "default",
-    "apple-mobile-web-app-title": "WA Reply Studio",
-    "application-name": "WA Reply Studio",
+    "apple-mobile-web-app-title": "Auto Reply Studio",
+    "application-name": "Auto Reply Studio",
     "viewport-fit": "cover",
   },
   openGraph: {
-    title: "WA Business Auto Reply Studio",
-    description: "Professional WhatsApp Auto Reply Template Generator for small businesses",
+    title: "Auto Reply Studio",
+    description: "Professional Auto Reply Template Generator for small businesses",
     type: "website",
   },
 };

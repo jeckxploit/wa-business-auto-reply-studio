@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'WA Business Auto Reply Studio',
-    short_name: 'WA Reply Studio',
-    description: 'Professional WhatsApp Auto Reply Template Generator for small businesses',
+    name: 'Auto Reply Studio',
+    short_name: 'Auto Reply',
+    description: 'Professional Auto Reply Template Generator for small businesses',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

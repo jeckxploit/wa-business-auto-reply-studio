@@ -1,10 +1,10 @@
-# 💬 WA Business Auto Reply Studio
+# 💬 Auto Reply Studio
 
 <div align="center">
 
-Professional WhatsApp Auto Reply Template Generator for Modern Businesses
+Professional Auto Reply Template Generator for Modern Businesses
 
-**Generate, customize, and manage WhatsApp response templates with ease.**
+**Generate, customize, and manage response templates with ease.**
 
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
