@@ -375,18 +375,18 @@ Dibuat oleh Auto Reply Studio
 
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-slate-900/60">
-        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+        <div className="container mx-auto px-3 sm:px-6 max-w-6xl">
           <div className="flex h-16 items-center justify-between">
             {/* Logo & Title - Responsive with proper text wrapping */}
             <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
-              <div className="p-2.5 bg-gradient-to-br from-blue-500 to-blue-600 dark:from-blue-600 dark:to-blue-700 rounded-xl shadow-lg shadow-blue-500/20 dark:shadow-blue-600/20 flex-shrink-0">
-                <MessageSquare className="h-5 w-5 text-white" />
+              <div className="p-2 sm:p-2.5 bg-gradient-to-br from-blue-500 to-blue-600 dark:from-blue-600 dark:to-blue-700 rounded-xl shadow-lg shadow-blue-500/20 dark:shadow-blue-600/20 flex-shrink-0">
+                <MessageSquare className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
               </div>
               <div className="min-w-0 flex-1">
-                <h1 className="text-base sm:text-lg font-bold bg-gradient-to-r from-slate-900 to-slate-700 dark:from-slate-100 dark:to-slate-300 bg-clip-text text-transparent leading-tight">
+                <h1 className="text-sm sm:text-base md:text-lg font-bold bg-gradient-to-r from-slate-900 to-slate-700 dark:from-slate-100 dark:to-slate-300 bg-clip-text text-transparent leading-tight truncate">
                   Auto Reply Studio
                 </h1>
-                <p className="text-xs text-slate-600 dark:text-slate-400 truncate leading-tight">
+                <p className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-400 truncate leading-tight">
                   Generator Pesan Profesional
                 </p>
               </div>
@@ -432,7 +432,7 @@ Dibuat oleh Auto Reply Studio
         </div>
       </header>
 
-      <main className="container mx-auto px-6 py-10 max-w-6xl flex-1">
+      <main className="container mx-auto px-3 sm:px-6 py-6 sm:py-10 max-w-6xl flex-1">
         {/* Mini Dashboard Stats */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
           <Card className="rounded-2xl border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-black/20 hover:scale-[1.02] hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 bg-white/50 dark:bg-slate-900/50 backdrop-blur">
